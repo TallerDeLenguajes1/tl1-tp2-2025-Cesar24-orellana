@@ -1,0 +1,4 @@
+1)    Ya no puedo ver el archivo tp2_1_2.c.
+2)   Ya no lo veo, pues esta en otra rama (Opcion_2) y yo me encuentro en la rama main.
+3)    La diferencia que noto es que, ah hora se crearon 2 ramas, la de main que  hr posee un archivo.txt y la rama secundaria(Opcion_2).
+4)    El cambio que noto a hr, es que se creo un nuevo commit en el cual ambas ramas se fusionaron (main y Opcion_2).
