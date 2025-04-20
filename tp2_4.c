@@ -16,6 +16,7 @@ void TipodeProcesador(char *Atipo, int *tipo);
 void ListarPCs(Tcompu pc[], int cant);
 void LiberarMemoria(Tcompu pc[], int cant);
 void MostrarMasVieja(Tcompu pc[], int cant);
+void MostrarMasVeloz(Tcompu pc[], int cant);
 
 int main()
 {
@@ -25,6 +26,7 @@ int main()
     GenerarPCs(pcs, cantidad);
     ListarPCs(pcs, cantidad);
     MostrarMasVieja(pcs, cantidad);
+    MostrarMasVeloz(pcs,cantidad);
 
     LiberarMemoria(pcs, cantidad);
     return 0;
@@ -81,7 +83,26 @@ void MostrarMasVieja(Tcompu pc[], int cant)
             id = i;
         }
     }
-    printf("PC Mas Vieja\n");
+    printf("--> PC Mas Vieja <--\n");
+    printf("Velocidad del procesador: %d\n", pc[id].velocidad);
+    printf("Anio de fabricacion: %d\n", pc[id].anio);
+    printf("Cantidad de nucleos del procesador: %d\n", pc[id].cantidad_nucleos);
+    printf("Tipo de procesador: %s\n", pc[id].tipo_cpu);
+    printf("\n");
+}
+
+void MostrarMasVeloz(Tcompu pc[], int cant){
+    int mas = 0, id;
+    for (int i = 0; i < cant; i++)
+    {
+        if (pc[i].velocidad > mas)
+        {
+            mas = pc[i].velocidad;
+            id = i;
+        }
+        
+    }
+    printf("--> PC Mas Veloz <--\n");
     printf("Velocidad del procesador: %d\n", pc[id].velocidad);
     printf("Anio de fabricacion: %d\n", pc[id].anio);
     printf("Cantidad de nucleos del procesador: %d\n", pc[id].cantidad_nucleos);
